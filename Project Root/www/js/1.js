@@ -1,0 +1,2 @@
+var semptomlardizisi = new Array("nefes darlığı","siyanoz","santral siyanoz","periferik siyanoz", "ağız kuruluğu", "ateş", "bulantı","halsizlik", "karın ağrısı", "kusma", "polidipsi", "poliüri");
+var girilensemptomlardizisi = new Array();	var gercek_g_semptomlardizisi = new Array();

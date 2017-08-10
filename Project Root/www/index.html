@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+  <script src="js/otomatik_tamamlama_1.js"></script>
+  <script src="js/otomatik_tamamlama_2.js"></script>
+  <script src="js/otomatik_tamamlama_3.js"></script>
+<script src="js/index.js"></script>
+<script src="js/1.js"></script>
+<script src="js/2.js"></script>
+<script src="js/3.js"></script>
+<script src="js/4.js"></script>
+<script src="js/5.js"></script>
+<script src="js/6.js"></script>
+<script src="js/7.js"></script>
+<script src="js/8.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="css/otomatik_tm.css">
+  <link rel="stylesheet" type="text/css" href="css/css_atasagun.css">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+<title>Atasagun</title>
+</head>
+<body bgcolor="#2b2b2b">
+<div class="w3-top">
+<div class="w3-container w3-dark-grey" style = "padding: 1px 18px; ">
+  <h2> <b> <center>Atasagun</center> </b> </h2> 
+</div>
+<div class="w3-container w3-dark-grey" style = "padding: 12px 18px; ">
+</div>
+<div style = "padding: 1px 0px; color: #ffffff; background-color: #353535;">
+</div>
+</div>    
+<div class="w3-row-padding " >
+<div class="w3-row-padding" style = "padding: 30px 18px; ">
+</div>
+<p></p>
+<div class="w3-third" >
+<div style="background-color: #055B0B; padding: 12px 12px;">
+
+ <label>
+          <form >
+             <input list="semptomlistesi" name="semptomgir" id="semptomgir" onclick="this.select()" onkeypress="ekleyen(event)" placeholder="Semptom Ekle" style="color: #088310; padding: 0px 5px; border: 0px solid; border-color: #088310; font-family: calibri; font-size: 14px; display: block; height: 32px; width: 100%; ">
+          </form> 
+ </label>
+<div class="row-padding" style="padding: 4px 0px;">
+</div>
+ <input type="button"
+	     value="Semptom Ekle"
+         style="cursor:pointer; color: #ffffff; background-color: #088c17; padding: 0px 5px; border: 2px solid; border-color: #088c17; text-align:left; font-family: calibri; font-size: 20px; display: block; height: 32px; width: 100%;" 
+		 onclick="semptomekleyici()">
+<div class="row-padding" style="padding: 4px 0px;">
+</div>
+ <textarea 
+ readonly  
+ id="girilensemptomlarlistesi" 
+ style="color: #055B0B; padding: 0px 5px; border: 0px solid; border-color: #02770b; font-family: calibri; font-size: 14px; display: block; height: 120px; width: 100%; resize: none;" >
+Eklenen Semptomlar...
+</textarea> 
+</div>
+<div class="row-padding" style="padding: 8px 0px;">
+</div>
+
+<div style="background-color: #a30023; padding: 12px 12px;">
+<label>
+          <form >
+             <input list="semptomcikarmalistesi" name="semptomcikar" id="semptomcikar" onclick="this.select()" onkeypress="cikaran(event)" placeholder="Semptom Çıkar" style="color: #a30023; padding: 0px 5px; border: 0px solid; border-color: #d6002a; font-family: calibri; font-size: 14px; display: block; height: 32px; width: 100%;">
+             <datalist id="semptomcikarmalistesi">
+			 <option value="nefes darlığı">
+			 <option value="siyanoz"> 
+			 <option value="santral siyanoz">
+			 <option value="periferik siyanoz">
+			 <option value="ağız kuruluğu">
+             <option value="karın ağrısı">
+             <option value="ateş">
+             <option value="halsizlik">
+             <option value="poliüri">
+             <option value="polidipsi">
+             <option value="bulantı">
+			 <option value="kusma">
+			</datalist>
+          </form> 
+ </label>
+ <div class="row-padding" style="padding: 4px 0px;">
+</div>
+
+
+<!--        olur da özel karakterleri göstermezse bir de bunu dene
+  <script>
+  // bunu uygula
+  $( function() {
+    var names = [ "Jörn Zaefferer", "Scott González", "John Resig", "ağız"];
+ 
+    var accentMap = {
+      "á": "a",
+    };
+    var normalize = function( term ) {
+      var ret = "";
+      for ( var i = 0; i < term.length; i++ ) {
+        ret += accentMap[ term.charAt(i) ] || term.charAt(i);
+      }
+      return ret;
+    };
+ 
+    $( "#developer" ).autocomplete({
+      source: function( request, response ) {
+        var matcher = new RegExp( $.ui.autocomplete.escapeRegex( request.term ), "i" );
+        response( $.grep( names, function( value ) {
+          value = value.label || value.value || value;
+          return matcher.test( value ) || matcher.test( normalize( value ) );
+        }) );
+      }
+    }
+	);
+  } );
+  </script>
+
+<div class="ui-widget">
+  <form>
+  <label for="developer">Developer: </label>
+  <input id="developer">
+  </form>
+</div>
+					-->
+  
+
+ <input type="button"
+	     value="Semptom Çıkar"
+         style="cursor:pointer; color: #ffffff; background-color: #ef002f; padding: 0px 5px; border: 3px solid; border-color: #e8002e; text-align:left; font-family: calibri; font-size: 20px; display: block; height: 32px; width: 100%;" 
+		 onclick="semptomcikarici()">
+<div class="row-padding" style="padding: 4px 0px;">
+</div>
+ <textarea 
+ readonly  
+ id="bilgiveuyari" 
+ style="color: #a30023; padding: 0px 5px; border: 0px solid; border-color: #d6002a; font-family: calibri; font-size: 14px; display: block; height: 50px; width: 100%; resize: none;" >
+Bilgi ve Uyarılar...
+</textarea>
+</div>
+<div class="w3-row-padding" style="padding: 8px 0px;">
+</div>
+</div>
+<div class="w3-third" >
+ <div style="background-color: #045573; padding: 12px 12px;">
+  <input type="button"
+	     value="Olası Tanılar"
+         style="cursor:pointer; color: #ffffff; background-color: #0477a0; padding: 0px 5px; border: 0px solid; border-color: #0477a0; text-align:left; font-family: calibri; font-size: 20px; display: block; height: 32px; width: 100%;" 	
+		 onclick="sonuc_getir()">
+<div class="row-padding" style="padding: 4px 0px;">
+</div>
+<textarea readonly  id="sonuclistesi" style="color: #045573; padding: 0px 5px; border: 0px solid; border-color: #04739b; font-family: calibri; font-size: 14px; display: block; height: 330px; width: 100%; resize: none;" >
+Sonuçlar...
+</textarea> 
+</div>
+<div class="w3-row-padding" style="padding: 8px 0px;">
+</div>
+</div>
+
+<div class="w3-third">
+ <div style="background-color: #424242; padding: 12px 12px;">
+<input type="button"
+	     value="Hakkında"
+         style="cursor:pointer; color: #ffffff; background-color: #6A6A6A; padding: 0px 5px; border: 2px solid; border-color: #6A6A6A; text-align:left; font-family: calibri; font-size: 20px; display: block; height: 32px; width: 100%;" 	 
+		 onclick="hakkinda_goster()">
+<div class="row-padding" style="padding: 4px 0px;">
+</div>
+<input type="button"
+	     value="Nasıl Kullanılır"
+         style="cursor:pointer; color: #ffffff; background-color: #6A6A6A; padding: 0px 5px; border: 2px solid; border-color: #6A6A6A; text-align:left; font-family: calibri; font-size: 20px; display: block; height: 32px; width: 100%;" 	 
+		 onclick="nasil_kullanilir_goster()">
+<div class="row-padding" style="padding: 4px 0px;">
+</div>
+<input type="button"
+	     value="Nasıl Kullanılır"
+         style="cursor:pointer; color: #ffffff; background-color: #6A6A6A; padding: 0px 5px; border: 2px solid; border-color: #6A6A6A; text-align:left; font-family: calibri; font-size: 20px; display: block; height: 32px; width: 100%;" 	 
+		 onclick="nasil_kullanilir_goster()">
+<div class="row-padding" style="padding: 4px 0px;">
+</div>
+<input type="button"
+	     value="Kullanım Koşulları"
+         style="cursor:pointer; color: #ffffff; background-color: #6A6A6A; padding: 0px 5px; border: 2px solid; border-color: #6A6A6A; text-align:left; font-family: calibri; font-size: 20px; display: block; height: 32px; width: 100%;" 	 
+		 onclick="kullanim_kosullari_goster()">		 
+<div class="row-padding" style="padding: 4px 0px;">
+</div>
+<textarea readonly  id="hakkindaveuyari" style="color: #424242; padding: 0px 5px; border: 0px solid; border-color: #636363; font-family: calibri; font-size: 14px; display: block; height: 210px; width: 100%; resize: none;" >
+Hakkında, Kullanım Koşulları, Nasıl Kullanılır... 
+</textarea>
+
+
+
+</div>
+<div class="row-padding" style="padding: 2px 0px;">
+</div>
+<div class="w3-row-padding">
+</div>		 		
+</div>
+</div>
+ <div class="w3-row-padding">
+<div class="w3-row-padding"style = "padding: 28px 16px; ">
+</div>
+</div>
+<div class="w3-bottom">
+
+<div style = "padding: 1px 0px; color: #ffffff; background-color: #353535;">
+</div>
+
+<div class="w3-row-padding" style = "padding: 2px 16px; background-color: #515151;">
+
+<div class="w3-row-padding" style = "padding: 1px 18px; background-color: #4D4D4D">
+</div>
+<div style = "padding: 2px 2px; color: #4D4D4D; background-color: #303030;">
+
+  <input type="button" 
+  value="Çıkış" 
+  style="cursor:pointer; color: #ffffff; background-color: #A00015; padding: 0px 0px; border: 0px solid; border-color: #A00015; font-family: calibri; font-size: 20px; display: block; height: 32px; width: 100%;"   
+  onclick="self.close()"> 
+
+</div>
+<div class="w3-row-padding" style = "padding: 1px 18px; background-color: #4D4D4D">
+
+</div>
+<div class="w3-row-padding">
+</div>
+
+<div class="w3-row-padding" style = "padding: 0px 18px; ">
+</div>
+<div class="w3-row-padding">
+<div class="w3-row-padding"style = "padding: 1px 16px; ">
+</div>
+</div>
+
+</div>
+</div>
+</body>
+</html>
+
